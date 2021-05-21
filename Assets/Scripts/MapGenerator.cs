@@ -9,6 +9,7 @@ public class MapGenerator : MonoBehaviour
     public bool useRandomSeed;
     public int smoothingIterations;
     public int smoothingStrength;
+    public float squareSize; // square size to generate mesh
     public int width, height;
     [Range(0,100)]
     public int randomFillPercent;
@@ -36,6 +37,9 @@ public class MapGenerator : MonoBehaviour
         {
             SmoothMap();
         }
+
+        MeshGenerator meshGen = GetComponent<MeshGenerator>();
+        meshGen.GenerateMesh(map, squareSize);
     }
 
     void RandomFillMap()
@@ -102,7 +106,7 @@ public class MapGenerator : MonoBehaviour
         return wallCount;
     }
 
-    void OnDrawGizmos() 
+/*     void OnDrawGizmos() 
     {
         if(map != null)
         {
@@ -116,6 +120,6 @@ public class MapGenerator : MonoBehaviour
                 }    
             }
         }
-    }
+    } */
 
 }
