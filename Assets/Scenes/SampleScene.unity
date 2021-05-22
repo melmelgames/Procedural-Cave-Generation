@@ -418,11 +418,12 @@ MonoBehaviour:
   smoothingStrength: 4
   squareSize: 1
   borderSize: 5
-  width: 50
-  height: 50
+  passageWayWidth: 2
+  width: 80
+  height: 80
   wallThresholdSize: 50
   roomThresholdSize: 50
-  randomFillPercent: 45
+  randomFillPercent: 51
 --- !u!4 &2144255903
 Transform:
   m_ObjectHideFlags: 0
